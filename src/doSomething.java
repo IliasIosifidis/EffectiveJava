@@ -1,9 +1,5 @@
-import chapter2.singleton.Elvis;
-import chapter2.singleton.ElvisEnum;
+import chapter2.unecessaryObjects.AutoBoxing;
 
 void main() {
-  Elvis el = Elvis.INSTANCE;
-  el.leaveTheBuilding();
-  ElvisEnum elNum = ElvisEnum.INSTANCE;
-  elNum.leaveTheBuilding();
+  System.out.println(AutoBoxing.sum());
 }
