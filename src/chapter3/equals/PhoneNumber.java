@@ -69,6 +69,16 @@ public final class PhoneNumber {
   public String toString() {
     return String.format("%03d-%03d-%04d", areaCode, prefix, lineNum);
   }
+
+  //Clone method for class with no references to mutable state
+  @Override
+  protected Object clone() throws CloneNotSupportedException {
+    try {
+      return (PhoneNumber) super.clone();
+    } catch (CloneNotSupportedException e ){
+      throw new AssertionError(); // Can't happen
+    }
+  }
 }
 
 
