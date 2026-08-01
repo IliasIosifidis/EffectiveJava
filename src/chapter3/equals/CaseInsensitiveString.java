@@ -6,7 +6,7 @@ import java.util.Objects;
 
 //Broken violates symmetry
 
-public class CaseInsensitiveString {
+public final class CaseInsensitiveString implements Comparable<CaseInsensitiveString> {
   private final String string;
 
   public CaseInsensitiveString(String string) {
@@ -40,6 +40,11 @@ public class CaseInsensitiveString {
     List<CaseInsensitiveString> list = new ArrayList<>();
     list.add(cis);
     System.out.println(list.contains(s));
+  }
+
+  @Override
+  public int compareTo(CaseInsensitiveString cis) {
+    return String.CASE_INSENSITIVE_ORDER.compare(string, cis.string);
   }
 }
 

@@ -1,5 +1,7 @@
 package chapter3.equals;
 
+import java.util.Comparator;
+
 // Class with a typical equals method
 public final class PhoneNumber {
   private final int areaCode, prefix, lineNum;
@@ -78,6 +80,25 @@ public final class PhoneNumber {
     } catch (CloneNotSupportedException e ){
       throw new AssertionError(); // Can't happen
     }
+  }
+//  public int compareTo(PhoneNumber pn){
+//    int result = Integer.compare(areaCode, pn.areaCode);
+//    if (result == 0){
+//      result = Integer.compare(prefix, pn.prefix):
+//      if (result == 0){
+//        result = Integer.compare(lineNum, pn.lineNum);
+//      }
+//    }
+//    return result;
+//  }
+
+  private static final Comparator<PhoneNumber> COMPARATOR =
+          Comparator.comparingInt((PhoneNumber pn) -> pn.areaCode)
+                  .thenComparingInt(pn -> pn.prefix)
+                  .thenComparingInt(pn -> pn.lineNum);
+
+  public int compareTo(PhoneNumber pn){
+    return COMPARATOR.compare(this, pn);
   }
 }
 
