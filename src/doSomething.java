@@ -1,12 +1,8 @@
-void main() {
-  EnumSet<DayOfWeek> day = EnumSet.noneOf(DayOfWeek.class);
-  System.out.println(day.getClass());
+import chapter4_ClassesAndInterfaces.compositionOverInheritance.InstrumentedHashSet;
 
-  EnumSet<Character.UnicodeScript> scrpts = EnumSet.allOf(Character.UnicodeScript.class);
-  System.out.println(scrpts
-          .getClass()
-          .getSuperclass()
-          .getSuperclass()
-          .getSuperclass()
-          .getSuperclass());
+void main() {
+  InstrumentedHashSet<String> strings = new InstrumentedHashSet<>();
+  strings.addAll(List.of("this", "and" , "that"));
+  strings.forEach(System.out::println);
+  System.out.println(strings.getAddCount());
 }
