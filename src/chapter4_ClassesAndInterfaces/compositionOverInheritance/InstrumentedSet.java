@@ -11,13 +11,9 @@ public class InstrumentedSet<E> extends ForwardingSet<E> {
   }
 
   public static class Dog {
-    private String name = "A dog";
-    private String race = "Dog of Color";
-
-    public Dog() {
-      this.name = name;
-      this.race = race;
-    }
+    private String name;
+    private String race;
+    public Dog() {}
   }
 
   public InstrumentedSet(Set<E> s){
