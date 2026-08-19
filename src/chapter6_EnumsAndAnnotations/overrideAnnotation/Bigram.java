@@ -12,9 +12,14 @@ public class Bigram {
     this.first = first;
     this.second = second;
   }
-  public boolean equals(Bigram b){
+
+  @Override
+  public boolean equals(Object o){
+    if (!(o instanceof Bigram)) return false;
+    Bigram b = (Bigram) o;
     return b.first == first && b.second == second;
   }
+
   public int hasCode(){
     return 31 * first + second;
   }
