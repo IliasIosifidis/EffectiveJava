@@ -32,4 +32,17 @@ public class ExampleOptionals {
 
   // Using optional when you know there’s a return value
 //  Element lastNobleGas = max(Elements.NOBLE_GASES).get();
+
+//    Optional<ProcessHandle> parentProcess = ph.parent();
+//      System.out.println("Parent PID: " + (parentProcess.isPresent() ?
+//      String.valueOf(parentProcess.get().pid()) : "N/A"));
+//  System.out.println("Parent PID: " +
+//          ph.parent().map(h -> String.valueOf(h.pid())).orElse("N/A"));
+
+//  streamOfOptionals
+//          .filter(Optional::isPresent)
+//          .map(Optional::get)
+
+//  streamOfOptionals.
+//.flatMap(Optional::stream)
 }
