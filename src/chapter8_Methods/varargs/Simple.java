@@ -1,4 +1,4 @@
-package chapter8_Methods.overloading;
+package chapter8_Methods.varargs;
 
 public class Simple {
   // Simple use of Varargs
@@ -34,4 +34,5 @@ public class Simple {
     }
     return min;
   }
+
 }
