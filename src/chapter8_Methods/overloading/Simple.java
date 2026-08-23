@@ -31,7 +31,7 @@ public class Simple {
       if (arg < min){
         min = arg;
       }
-      return min;
     }
+    return min;
   }
 }
