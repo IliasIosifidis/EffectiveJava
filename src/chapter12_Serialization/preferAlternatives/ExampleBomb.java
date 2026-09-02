@@ -18,7 +18,7 @@ public class ExampleBomb {
       s1 = t1;
       s2 = t2;
     }
-    return new byte[10]; // a random return
+    return new byte[10]; // a random returnρ
 //    return serialize(root); // Method omitted for brevity
   }
 }
